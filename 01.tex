@@ -1,0 +1,95 @@
+\section{}
+
+\subsection{Introduction}
+
+Tetration, or iterative tetration, is the fourth hyperoperation
+after addition, product and exponential function. Tetration is defined as 
+
+\[^nr := \underbrace{r^{r^{\iddots^{r}}}}_{\text{n}} \]
+
+respectively copies of r are exponentially ntimes, we define it recursively
+
+\begin{align}
+        ^n r:= r\uparrow\uparrow n :=
+        \left\{ 
+        \begin{array}{ll}
+                1 & (n = 0) \\
+                r^{\left( ^{n-1}r \right)} & (n \geq 1)
+        \end{array} 
+        \right.
+\end{align}
+
+apparently \(^{n-1}r = \log_r(^n r)\). 
+The parameters r and a are referred to as 
+basis and height. In this paper, we will use 
+special notation to express tetration.
+
+\begin{align}
+        ^n r:= \mathcal{T}(\underbrace{r, r, ..
+        ., r}_{\text{n}} | 1):= \exp_r^n 1
+\end{align}
+
+for simplicity we will write the vector 
+in the form \((r_1, r_2, ..., r_x)\) 
+as \(\xi_x\). We can consider this vector
+as an ordered x-tuple, for which we create 
+a more general notation \cite{28}
+\[\xi_k: = \bigotimes_{i=1}^k a_i \]
+then we define the subtraction of the 
+elements in \(\xi\) vector
+
+\begin{definition}[subtraction of the elements in \(\xi\) vector]
+        Let us have \(\xi_k\), where 
+        \(\xi_k :=\bigotimes_{i=1}^k a_i 
+        := (a_1, a_2, ..., a_k)\), for \(a_1
+        , a_2, ... \in \mathbb{C}\). Subtraction 
+        of the elements \(a_n\) from thr \(\xi\) 
+        vector, where \(k \geq n \geq 1\) we define:
+        
+        \begin{align}
+                \xi_k \setminus a_n &
+                := \bigotimes_{\{k \geq 
+                j \geq 1\} \setminus n} a_i
+        \end{align}
+        
+\end{definition}
+
+We will use special notation for the most important 
+elements: \(a_1 = \alpha\), \(a_2 = \beta\), 
+\(a_3 = \gamma\), \(a_4 = \delta\). 
+We will denote \(\omega\) the last element of 
+the ordered xi vector. However, we generalise 
+\(\mathcal{T}\) - function and define it as follows:
+
+\begin{definition}
+        \(\mathcal{T}\) function is recursive 
+        \(\mathcal{T}(n_1, n_2, ..., n_k | x) = 
+        n_1^{\mathcal{T}(n_2, ..., n_k | x)}\) 
+        with endpoints \(\mathcal{T}(n_k | x ) = n_k^x\) , 
+        where the coefficients  \((n_1, n_2, .
+        .., n_k)\) make up the \(\xi\) vector,
+        when it applies \(n_1, n_2, ..., n_k \in 
+        \mathbb{C}\).  \(\mathcal{T}(n_1, n_2, ..
+        ., n_k | x) \) is the \(\mathcal{T}\) k-th
+        order function with base \(x\).
+\end{definition}
+
+Then it is necessary to define its inverse function,
+because the equation \(\mathcal{T}(2, 3 | x) = x\) we
+can reformulate into an equivalent form\(log_3(log_2(x)) = x\).
+
+\begin{definition}[\(\mathcal{D}\)-function]
+        The \(\mathcal{T}^{-1}\) function is a recursive function
+        
+        \begin{equation}
+                \mathcal{T}^{-1}(n_1, n_2, ..., n_k | x) =
+                log_{n_1}({\mathcal{T}^{-1}(n_2, ..., n_k | x)})
+                \label{3}
+        \end{equation}
+        
+        with endpoints \(\mathcal{T}^{-1}(n_k | x ) = log_{n_k}(x)\), 
+        where \(n_1, n_2, ..., n_k \in  \mathbb{C}\). We choose notation
+        \(\mathcal{T}^{-1}(\xi_k | x) := \mathcal{D}(\xi_k | x)\). 
+        \(\mathcal{D}(n_1, n_2, ..., n_k | x) \) is \(\mathcal{D}\)
+        k-th order function with base \(x\).
+\end{definition}
